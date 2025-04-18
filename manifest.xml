@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appmanifest/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides/1.0">
+  <Id>your-unique-id-here</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Your Name</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Markdown to Word Converter" />
+  <Description DefaultValue="Convert selected Markdown text to Word formatted text." />
+  <IconUrl DefaultValue="https://your-domain.com/images/icon_32x32.png" />
+  <SupportUrl DefaultValue="https://your-domain.com/support" />
+  <AppDomains>
+    <AppDomain>https://your-domain.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://your-domain.com/Home.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Word">
+        <Runtimes>
+          <Runtime resid="WebViewRuntime.Url" lifetime="long" />
+        </Runtimes>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://your-domain.com/images/icon_16x16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://your-domain.com/images/icon_32x32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://your-domain.com/images/icon_80x80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="WebViewRuntime.Url" DefaultValue="https://your-domain.com/Home.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="MarkdownConverter.Group.Label" DefaultValue="Markdown Tools" />
+        <bt:String id="MarkdownConverter.Button.Label" DefaultValue="Convert Markdown" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="MarkdownConverter.Button.Tooltip" DefaultValue="Convert selected Markdown text to Word formatting." />
+      </bt:LongStrings>
+    </Resources>
+    <DesktopFormFactor>
+      <FunctionFile resid="WebViewRuntime.Url">
+        <ExtensionPoint xsi:type="PrimaryCommandSurface">
+          <OfficeTab id="TabHome">
+            <Group id="MarkdownConverter.Group">
+              <Label resid="MarkdownConverter.Group.Label" />
+              <Control xsi:type="Button" id="MarkdownConverter.Button">
+                <Label resid="MarkdownConverter.Button.Label" />
+                <Tooltip resid="MarkdownConverter.Button.Tooltip" />
+                <Supertip>
+                  <Title resid="MarkdownConverter.Button.Label" />
+                  <Description resid="MarkdownConverter.Button.Tooltip" />
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16x16" resid="icon16" />
+                  <bt:Image size="32x32" resid="icon32" />
+                  <bt:Image size="80x80" resid="icon80" />
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>convertMarkdownToWord</FunctionName>
+                </Action>
+              </Control>
+            </Group>
+          </OfficeTab>
+        </ExtensionPoint>
+      </FunctionFile>
+    </DesktopFormFactor>
+  </VersionOverrides>
+</OfficeApp>
