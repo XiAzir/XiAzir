@@ -6,16 +6,16 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Markdown to Word Converter" />
   <Description DefaultValue="Convert selected Markdown text to Word formatted text." />
-  <IconUrl DefaultValue="https://your-domain.com/images/icon_32x32.png" />
-  <SupportUrl DefaultValue="https://your-domain.com/support" />
+<IconUrl DefaultValue="https://xiazir.github.io/XiAzir/images/icon_32x32.png" />
+<SupportUrl DefaultValue="https://xiazir.github.io/XiAzir/support" />
   <AppDomains>
-    <AppDomain>https://your-domain.com</AppDomain>
+<AppDomain>https://xiazir.github.io/XiAzir</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://your-domain.com/Home.html" />
+<SourceLocation DefaultValue="https://xiazir.github.io/XiAzir/Home.html" />
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -28,12 +28,12 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://your-domain.com/images/icon_16x16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://your-domain.com/images/icon_32x32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://your-domain.com/images/icon_80x80.png"/>
+<bt:Image id="icon16" DefaultValue="https://xiazir.github.io/XiAzir/images/icon_16x16.png"/>
+<bt:Image id="icon32" DefaultValue="https://xiazir.github.io/XiAzir/images/icon_32x32.png"/>
+<bt:Image id="icon80" DefaultValue="https://xiazir.github.io/XiAzir/images/icon_80x80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="WebViewRuntime.Url" DefaultValue="https://your-domain.com/Home.html" />
+<bt:Url id="WebViewRuntime.Url" DefaultValue="https://xiazir.github.io/XiAzir/Home.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="MarkdownConverter.Group.Label" DefaultValue="Markdown Tools" />
